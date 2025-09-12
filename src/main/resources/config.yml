@@ -1,0 +1,25 @@
+# AzRestart Plugin Configuration
+# Time format: HH:mm (24-hour format)
+restart-time: "06:00"
+
+# Message prefix (supports color codes with &)
+prefix: "&c[AutoRestart] "
+
+# Warning messages sent before restart
+# These will be sent at 5 minutes, 1 minute, and 10 seconds before restart
+warning-messages:
+  - "Server will restart in 5 minutes!"
+  - "Server will restart in 1 minute!"
+  - "Server will restart in 10 seconds!"
+
+# Discord webhook URL (leave empty to disable Discord notifications)
+# To get a webhook URL: Server Settings > Integrations > Webhooks > Create Webhook
+webhook-url: ""
+
+# Additional settings (optional)
+settings:
+  # Enable debug logging
+  debug: false
+
+  # Custom restart reason (shown in server logs)
+  restart-reason: "Scheduled automatic restart"

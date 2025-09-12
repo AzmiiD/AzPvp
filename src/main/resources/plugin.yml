@@ -1,0 +1,21 @@
+name: AzRestart
+version: '1.0-SNAPSHOT'
+main: io.github.AzmiiD.azRestart.AzRestart
+api-version: '1.21'
+authors: [ Azmii_ ]
+description: Auto Restart Server Plugin
+
+commands:
+  autorestart:
+    description: Command for AutoRestart plugin
+    usage: /autorestart reload
+    permission: autorestart.reload
+    aliases: [ar, restart]
+
+permissions:
+  autorestart.reload:
+    description: Allows reloading the AutoRestart configuration
+    default: op
+  autorestart.status:
+    description: Allows viewing AutoRestart status
+    default: true
