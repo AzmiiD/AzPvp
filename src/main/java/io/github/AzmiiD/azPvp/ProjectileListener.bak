@@ -1,0 +1,27 @@
+package io.github.AzmiiD.azPvp;
+
+import org.bukkit.entity.Player;
+import org.bukkit.entity.Projectile;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.entity.ProjectileLaunchEvent;
+
+public class ProjectileListener implements Listener {
+    private final AzPvp plugin;
+
+    public ProjectileListener(AzPvp plugin) {
+        this.plugin = plugin;
+    }
+
+    @EventHandler
+    public void onProjectileLaunch(ProjectileLaunchEvent event) {
+        Projectile projectile = event.getEntity();
+        if (!(projectile.getShooter() instanceof Player)) return;
+
+        Player shooter = (Player) projectile.getShooter();
+        if (!plugin.isPvPEnabled(shooter.getUniqueId())) {
+            event.setCancelled(true);
+            shooter.sendMessage(plugin.getPrefixedMessage("messages.pvp-disabled-launch"));  // Opsional: Pesan "Kamu tidak bisa launch projectile PVP!"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+# AZPvP Config
+
+prefix: "&6[AZPvP] "
+
+combat-cooldown: 5  # Detik cooldown setelah damage terakhir
+
+blocked-commands:
+  - spawn
+  - back
+  - home
+  - tp
+  - tpa
+  # Tambah command lain yang ingin diblok
+
+messages:
+  in-combat: "&cYou are in combat {remaining}"
+  exit-combat: "&aYou are out of combat"
+  command-blocked: "&cKamu tidak bisa pakai command ini saat combat!"
+  pvp-enabled: "&aPVP diaktifkan! Kamu bisa PVP dengan player lain yang PVP on."
+  pvp-disabled: "&cPVP dinonaktifkan! Kamu aman dari PVP player."
+  pvp-usage: "&cUsage: /pvp <on|off>"
+  pvp-disabled-attack: "&cPVP target atau kamu dinonaktifkan!"
+  reload-success: "&aConfig berhasil direload!"
+  no-permission: "&cKamu tidak punya permission!"
+  # pvp-disabled-launch: "&cKamu tidak bisa launch projectile saat PVP off!"
